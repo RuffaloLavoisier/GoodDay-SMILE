@@ -209,6 +209,12 @@ void detectAndDraw(Mat& img, CascadeClassifier& cascade,
 		int rect_height = cvRound((float)img.rows * intensityZeroOne);
 		Scalar col = Scalar((float)255 * intensityZeroOne, 0, 0);
 		rectangle(img, Point(0, img.rows), Point(img.cols / 10, img.rows - rect_height), col, -1);
+
+		if(Target > ponit){
+			count = count + 1;
+		}
+		// cv::putText( myImage, myText, myPoint, myFontFace, myFontScale, Scalar::all(255) );
+		// cv::putText(image, "I like a pork cutlet!", cv::Point(30, 340), cv::FONT_HERSHEY_PLAIN, 2.0, cv::Scalar(0, 0, 255), 2); // 글쓰기
 	}
 
 	imshow("result", img);
