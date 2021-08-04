@@ -4,6 +4,11 @@
 #include "opencv2/videoio.hpp"
 #include <iostream>
 
+#define CheckGrade 0.5
+#define delay_time 1
+int count_N = 0;
+time_t prev_time = 0;
+
 using namespace std;
 using namespace cv;
 
@@ -210,12 +215,20 @@ void detectAndDraw(Mat& img, CascadeClassifier& cascade,
 		Scalar col = Scalar((float)255 * intensityZeroOne, 0, 0);
 		rectangle(img, Point(0, img.rows), Point(img.cols / 10, img.rows - rect_height), col, -1);
 
-		if(Target > ponit){
-			count = count + 1;
+		cout<< intensityZeroOne<<"\n"; // 0.5 center
+
+		time_t now = time(NULL);
+		cout << now << " " << prev_time<<"\n";
+		if (now - prev_time > delay_time) {
+			cout << "True\n";
+			prev_time = now;
+			if (intensityZeroOne > CheckGrade) {
+				count_N = count_N + 1;
+			}
 		}
-		// cv::putText( myImage, myText, myPoint, myFontFace, myFontScale, Scalar::all(255) );
-		// cv::putText(image, "I like a pork cutlet!", cv::Point(30, 340), cv::FONT_HERSHEY_PLAIN, 2.0, cv::Scalar(0, 0, 255), 2); // 글쓰기
 	}
+	String myText = "Count : " + to_string(count_N);
+	putText(img, myText, Point(80, 400), FONT_HERSHEY_PLAIN, 2.0, Scalar(0, 0, 255), 2); // 글쓰기
 
 	imshow("result", img);
 }
