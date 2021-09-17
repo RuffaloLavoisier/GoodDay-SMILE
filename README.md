@@ -5,7 +5,7 @@ OpenCV cpp 예제 파일에 있는 웃음 탐지기 입니다.
 
 ## Setting
 
-1. 윈도우일 경우 OpenCV 설치 후 [환경 변수](https://3001ssw.tistory.com/162) 작업이 필요합니다.
+1. 윈도우일 경우 OpenCV 설치 후 [환경 변수](https://3001ssw.tistory.com/162) 작업이 필요합니다.  
 
 2. 리눅스일 경우 Command 환경에서 openCV를 설치합니다. 
 
