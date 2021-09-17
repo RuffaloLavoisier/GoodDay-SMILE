@@ -23,5 +23,5 @@ $ g++ -o SMILE_count opencv_smile.cpp $(pkg-config opencv4 --libs --cflags)
 ```
 $ ./SMILE_count --cascade="/usr/local/share/opencv4/haarcascades/haarcascade_frontalface_alt.xml" --smile-cascade="/usr/local/share/opencv4/haarcascades/haarcascade_smile.xml" --scale=1.3
 ```
-`Windows` : Visual Basic Studio에서 실행합니다.
+`Windows` : Visual Basic Studio에서 실행합니다.  
 `Linux`   : Terminal에서 실행합니다.
