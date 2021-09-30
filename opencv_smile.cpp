@@ -228,7 +228,7 @@ void detectAndDraw(Mat& img, CascadeClassifier& cascade,
 		}
 	}
 	String myText = "Count : " + to_string(count_N);
-	putText(img, myText, Point(80, 400), FONT_HERSHEY_PLAIN, 2.0, Scalar(0, 0, 255), 2); // 글쓰기
+	putText(img, myText, Point(1000, 600), FONT_HERSHEY_PLAIN, 2.0, Scalar(0, 0, 255), 5); // 글쓰기
 
 	imshow("result", img);
 }
