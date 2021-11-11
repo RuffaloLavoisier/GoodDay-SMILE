@@ -11,7 +11,7 @@ Measure the number of laughter detections by adding counts.
 
 ## Environment
 
-`windows`, `Linux`
+`Windows`, `Linux`
 
 ## Run
 
@@ -19,9 +19,13 @@ Measure the number of laughter detections by adding counts.
 ```
 $ g++ -o SMILE_count opencv_smile.cpp $(pkg-config opencv4 --libs --cflags)
 ```
-### Build
+### Run
 ```
-$ ./SMILE_count --cascade="/usr/local/share/opencv4/haarcascades/haarcascade_frontalface_alt.xml" --smile-cascade="/usr/local/share/opencv4/haarcascades/haarcascade_smile.xml" --scale=1.3
+$ ./SMILE_count --cascade=model/haarcascade_frontalface_alt.xml --smile-cascade=model/haarcascade_smile.xml --scale=1.3
+```
+or
+```
+$ ./run.sh
 ```
 `Windows`: Visual Basic Studio.  
 `Linux`: It's a terminal.
