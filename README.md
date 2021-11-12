@@ -3,6 +3,8 @@
 This is a laughter detector in the OpenCVcpp example file.  
 Measure the number of laughter detections by adding counts.
 
+![smile](./img/smile.png)
+
 ## Setting
 
 1.If it is a windows, [environmental variable](https://3001ssw.tistory.com/162) operation is required after installing opencv.
